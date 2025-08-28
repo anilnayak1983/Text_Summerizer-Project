@@ -21,9 +21,9 @@ list_files = [
     "params.yaml",
     "app.py",
     "main.py",
-    "Dockerfile"
-    "requirements.txt"
-    "setup.py"
+    "Dockerfile",
+    "requirements.txt",
+    "setup.py",
     "research/trials.ipynb"
 
 ]
