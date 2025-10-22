@@ -31,12 +31,15 @@ list_files = [
 for filepath in list_files:
     filepath = Path(filepath)
     filedir , filename = os.path.split(filepath)
-    if filedir !="":
+
+    if filedir != "":
         os.makedirs(filedir , exist_ok=True)
-        logging.info(f"Creating directory :{filedir} for {filename}")
-    
-    if (not os.path.exists(filepath)) or (os.path.getsize(filepath)):
+        logging.info(f"Creating Directory {filedir} for the file {filename}")
+
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath , 'w') as f:
             pass
-            logging.info(f"Creating emplty file {filepath}")
-                     
+            logging.info(f"creating empty file : {filepath}")
+
+    else:
+        logging.info(f"{filename} already exists")
